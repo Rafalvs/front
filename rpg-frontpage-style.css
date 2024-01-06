@@ -1,0 +1,362 @@
+/* https://codepen.io/Rafalvs/pen/BabKKGM */
+
+* {
+    font-family: Baskerville, serif; 
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+
+    /* HEADER */
+
+                
+.navigation {
+    position: fixed;
+    top: 0px;
+    overflow: hidden;
+    background-color: #38271d;
+    padding: 20px 10px;
+    border: 4px solid black;
+    width: 100%;
+    max-height: 20%;
+    z-index: 10;
+}
+
+h1 {
+    color: black;
+}
+
+h2 {
+    color: black;
+}
+
+h3 {
+    color: white;
+}
+
+
+/*design dos botões*/
+.nav-right a {
+    border: 2px solid black;
+    padding: 12px;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.nav-right a:hover{                
+    background-color: black;
+}
+
+
+/*elementos na esquerda*/ 
+.logo {
+    float: left;
+}
+
+/*botão escondido*/
+.left:hover .overlay {
+    opacity: 0.8;
+}
+
+.overlay {
+    position: absolute;
+    top: 24px;
+    bottom: 20px;
+    left: 20px;
+    right: 0;
+    height: 110px;
+    width: 560px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #38271d;
+  }
+
+#d20 a {
+    color: white;
+    text-shadow: 2px 1px black;
+    font-size: 40px;
+    position: absolute;
+    left: 260px;
+    top: 58px;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/*elementos na direita*/
+.nav-right {
+    float: right;
+    position: relative;
+    top: 45px;
+}
+
+    /*cores dos botões*/
+#home {
+    color: #9435c7;
+    text-shadow: 2px 1px black;
+}
+
+#login {
+    color: #974cc3;
+    text-shadow: 2px 1px black;
+}
+
+#register {
+    color: #5a6fc0;
+    text-shadow: 2px 1px black;
+}
+
+
+    /* BODY */
+
+
+body {
+    background-color: black;
+    margin: 0 auto;
+}
+
+#banner {
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7665f267-607e-41b3-93d4-d44b75b58e37/dcxd29k-0e5bfb01-8a6a-41f5-8298-864275172f6d.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzc2NjVmMjY3LTYwN2UtNDFiMy05M2Q0LWQ0NGI3NWI1OGUzN1wvZGN4ZDI5ay0wZTViZmIwMS04YTZhLTQxZjUtODI5OC04NjQyNzUxNzJmNmQuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.F69bI0mDcprMwE-GpiXDEgnBhD8J5Tm6hpKMOGyEUnc);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -900px 100px;
+    height: 1000px;
+    max-width: 100%;
+    z-index: -2;
+}
+
+
+/*posição default das caixas*/
+.boxes {
+    position: absolute;
+    top: 23%;
+}
+
+
+/*caixa única*/
+.bigbox {
+    border: 4px solid transparent;
+    float: left;
+    width: 240px;
+    height: 300px;
+    margin: 25px;
+    position: relative;
+    left: 15px;
+    display: block;
+    text-align: center;
+}
+
+.bigbox .art{
+    background-image: url(https://lh3.googleusercontent.com/pw/ABLVV86Gq4CeZNd-ul61S4JvvlN3QNsEY3AYeH66kWkuvqTO7xfpqL9aZ_ZpHT3cNqnW4PZBFkT83PmjroY19USjTaJx2Hf0soS1O5QKwk13zwcEaUYvMNk_58a4ctIKxk9go7DmOMw57p5PI7hwyGKiOUHRdp5C9q7Y0MjL_r_33GhTuOtTCwZc8oz9EjVFk9BCrUvD-XKFbPaKkKVKlsYtnr1XvERgPLv1JiRER0IFHm21qoNFDVnt7XcpW2TemZxBbyKbQIrSgtx2xKVi1X87vFb-EhaM1vPrRjdNcp189oCWAlTowvM_oFRjGC1WJum6AHMwzu4_-Eyq_SH6PxObgQH_Yb4I64O0iBN0IEfh5XS1rp7-D69sWmTVRy2ICMlxVoV7Th9y-Y110cX4GgG4PZPnmvnmB5IpBYmyYlFeQvy3NQ_U7ex9qtZ7qsva4L-IIP85MwuAQ93z7qktfOr7pEvXhUodmCRtg9EcGzUbu4ank_JAaFxPa5_VkuN6iWSRxV__Izb4sYfd1IJj6eb3k_4PZ6WPeNBYA-eVxhGuz2sNFipOl8hlV9iP7Ksa2v5_bH-fEpLmCof9iXaXtUSD6Evml6beCXomkZVS4H4c2sEVkK8HpnQihA_8cEPDdfbv4_WuMZsu1RnDinZTAozyYjyNjkWjQ-6OwVbPNGvBG8KMHOo0230DGKhsISdLC8v5pVqAUlR_IbQYa3cRks3tzUgLop8g5YNWIbAKlicT2u1v_STuxjjdfOSXBbCxLkd7sR8AMtBk2JYrJluKF8AplhGsSaYuks93HijU4nw1FpVxs2_kEpFaS-JdcA-LQlCRURVmf64fpHTr2zRriFtziI6GMENwowrh8KNv9GG0SMGIhwGpPmwwnrYd28QS69epN5KW8u3O9hOYJe8Dvzkt-V1_GbxSBUqZW0IOZ3G9nST1fzWibWC5zQ3OrIg8B_IgBdpWiAdPtnF_9Q=w413-h739-s-no-gm?authuser=0);
+    background-size: cover;
+    height: 500px;
+    width: 300px;
+    border: 2px solid black;
+    position: relative;
+    top: -66px;
+    right: 40px;
+    -webkit-transform: scale(0.9);
+	transform: scale(0.9);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.art:hover{
+    transform: scale(1);
+}
+
+.art h2 {
+    border: 1px solid transparent;
+    position: relative;
+    top: -35px;
+    right: 2px;
+    width: 294px;
+    height: 500px;
+    color: #9435c7;
+    opacity: 0;
+    text-shadow: 2px 1px black;
+    font-size: 40px;
+    transition: .3s ease;
+}
+
+.art h2:hover {
+    opacity: 1;
+    transition: .5s ease;
+}
+
+/*outras caixas*/
+.box {
+    float: right;
+    border: 2px solid black;
+    height: 180px;
+    width: 380px;
+    text-align: left;
+    position: relative;
+    top: 30px;
+    right: 50px;
+    margin: 2px;
+    -webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+.box:hover {
+	-webkit-transform: scale(0.9);
+	transform: scale(0.9);
+}
+
+
+/*definindo os textos*/
+.box h1 {
+    position: relative;
+    top: -24px;
+    right: 3px;
+    color: white;
+    text-shadow: 2px 1px black;
+    border: 1px solid black;
+    width: 20px;
+    height: 42px;
+}
+
+.box h3 {
+    position: relative;
+    top: 27px;
+    left: 2px;
+    border: 1px solid black;
+    text-shadow: 2px 1px black;
+    height: 48px;
+    width: 381px;
+    float: right;
+}
+
+
+/*caixa por caixa*/
+#community .box {
+    background-image: url(https://images.alphacoders.com/101/1013122.jpg);
+    background-size: 500px;
+    background-position: -120px -40px;
+}
+
+#community h1 {
+    background-color: #ffbb00ec;
+    width: 180px;
+}
+
+#community h3 {
+    background-color: #ffbb00ec;
+}
+
+
+#news .box {
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/171c8d33-d65e-40fd-9395-c5c58adea2da/dfklcfo-6b394a94-c455-4960-9aa1-2a274b854933.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzE3MWM4ZDMzLWQ2NWUtNDBmZC05Mzk1LWM1YzU4YWRlYTJkYVwvZGZrbGNmby02YjM5NGE5NC1jNDU1LTQ5NjAtOWFhMS0yYTI3NGI4NTQ5MzMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.SJxaPSKjJMLb-kl0osx5ksgpfcS2P4rMTE3AyRZoXJI);
+    background-size: 420px;
+    background-position: -20px -250px;
+}
+
+#news h1 {
+    background-color: #0c63bd;
+    width: 113px;
+}
+
+#news h3 {
+    background-color: #0c63bd;
+}
+
+
+#shop .box {
+    background-image: url(https://i.imgur.com/A3eTtoq.png);
+    background-size: 600px;
+}
+
+#shop h1 {
+    background-color: #830a0a;
+    width: 66px;
+}
+
+#shop h3 {
+    background-color: #830a0a;
+}
+
+
+#guides .box {
+    background-image: url(https://drunkwookie.com.br/wp-content/uploads/2016/11/Library.jpg);
+    background-size: 420px;
+    background-position: 0px -95px;
+}
+
+#guides h1 {
+    background-color: rgb(216, 66, 12);
+    width: 84px;
+}
+
+#guides h3 {
+    background-color: rgb(216, 66, 12);
+}
+
+
+#music .box {
+    background-image: url(https://www.dndbeyond.com/attachments/10/615/bard-101.jpg);
+    background-size: 380px;
+    background-position: 0px -5px;
+}
+
+#music h1 {
+    background-color: #9435c7;
+    width: 102px;
+}
+
+#music h3 {
+    background-color: #9435c7;
+}
+
+
+#games .box {
+    background-image: url(https://as2.ftcdn.net/v2/jpg/06/06/20/05/1000_F_606200523_jNqiFEjGOLMs5Wj1nqhJIb3bgyMDXvtm.jpg);
+    background-size: 400px;
+    background-position: -12px -95px;
+}
+
+#games h1 {
+    background-color: #35c435;
+    width: 80px;
+}
+
+#games h3 {
+    background-color: #35c435;
+}
+
+    /*FOOTER*/
+
+
+.footer {
+    background-color: #38271c;
+    width: 100%;
+    padding: 10px 0px;
+    float: left;
+    border-style: solid;
+    border-width: 4px;
+}
+
+.footer h1 a {
+    margin-right: 0px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: large;
+    color: #66d266;
+    border: 2px solid black;
+    text-shadow: 2px 1px black; 
+    padding: 10px 10px;
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+.footer h1 a:hover {
+    background-color: black;
+}
