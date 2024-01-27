@@ -80,7 +80,7 @@ h3 {
     text-shadow: 2px 1px black;
     font-size: 40px;
     position: absolute;
-    left: 260px;
+    left: 266px;
     top: 58px;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -178,6 +178,36 @@ body {
     z-index: -2;
 }
 
+/*barra superior*/
+.bar {
+    width: 1426px;
+    height: 72px;
+    border: 4px solid black;
+    background-color: black;
+    text-align: center;
+    position: relative;
+    top: 174px;
+    left: 6%;
+    z-index: 1;
+}
+
+.bar a {
+    width: 138px;
+    height: 64px;
+    border: 2px solid #974cc3;
+    background-color: #38271d;
+    display: inline-block;
+    text-align: center;
+}
+
+.bar a:hover {
+    background-color: black;
+}
+
+.bar h3 {
+    text-shadow: 3px 2px black;
+}
+
 
 /*posição default das caixas*/
 .boxes {
@@ -188,14 +218,14 @@ body {
 
 /*caixa única*/
 .bigbox {
-    border: 4px solid black;
+    border: 4px solid transparent;
     float: left;
     width: 240px;
     height: 400px;
     margin: 25px;
     position: relative;
     left: 20px;
-    top: 8px;
+    top: 120px;
     display: block;
     text-align: center;
 }
@@ -247,7 +277,7 @@ body {
     width: 380px;
     text-align: left;
     position: relative;
-    bottom: 5px;
+    top: 106px;
     right: 50px;
     margin: 2px;
     -webkit-transition: .3s ease-in-out;
@@ -413,18 +443,18 @@ body {
 }
 
 
-#creation .box {
+#beasts .box {
     background-image: url(https://imgur.com/2LqkdSu.jpg);
     background-size: 400px;
     background-position: -10px -310px;
 }
 
-#creation h1 {
-    width: 112px;
+#beasts h1 {
+    width: 126px;
     background-color: black;
 }
 
-#creation h3 {
+#beasts h3 {
     background-color: black;
 }
 
